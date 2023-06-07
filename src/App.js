@@ -10,8 +10,21 @@ import {
   setNewOverlays,
   setLegDescription,
   validateCombos,
-  generateNewDescription
+  generateNewDescription,
 } from "./CheckPatterns";
+
+const styles = {
+  false: {
+    backgroundColor: "#ebebeb",
+    boxShadow: "0 9px #999",
+    transform: "none",
+  },
+  true: {
+    backgroundColor: "#aaa7a9",
+    boxShadow: "0 5px #666",
+    transform: "translateY(4px)",
+  },
+};
 
 // this is where you find the body of the html
 // if you see something that looks like a funky html tag, thats react
@@ -30,7 +43,7 @@ export default function App() {
     bodyBase: {},
     bodyOverlays: [],
     legOverlays: [],
-    faceOverlays: []
+    faceOverlays: [],
   });
 
   // the following functions are Reactive and use a state
@@ -51,7 +64,7 @@ export default function App() {
     flaxen: false,
     mushroom: false,
     silverDrapple: false,
-    dun: false
+    dun: false,
   });
 
   // this is the default colour for eye, hoof and facial markings
@@ -90,7 +103,7 @@ export default function App() {
     let overlays = {
       foundBody: [],
       foundLegs: [],
-      foundFace: []
+      foundFace: [],
     }; // list of new overlays
     let newOverlays; // temporary variable for merging overlay lists together
     const trueColourBooleans = findTrueColourBooleans(buttonSettings);
@@ -141,7 +154,7 @@ export default function App() {
     }
     setButtonSettings((buttonSettings) => ({
       ...buttonSettings,
-      champagne: tmp
+      champagne: tmp,
     }));
   };
 
@@ -159,7 +172,7 @@ export default function App() {
     }
     setButtonSettings((buttonSettings) => ({
       ...buttonSettings,
-      cream: tmp
+      cream: tmp,
     }));
   };
 
@@ -177,7 +190,7 @@ export default function App() {
     }
     setButtonSettings((buttonSettings) => ({
       ...buttonSettings,
-      snowdrop: tmp
+      snowdrop: tmp,
     }));
   };
 
@@ -195,7 +208,7 @@ export default function App() {
     }
     setButtonSettings((buttonSettings) => ({
       ...buttonSettings,
-      sunshine: tmp
+      sunshine: tmp,
     }));
   };
 
@@ -276,23 +289,21 @@ export default function App() {
                         setRed(true); // this changes the red boolean in the red useState.
                         setButtonSettings((buttonSettings) => ({
                           ...buttonSettings,
-                          red: true
+                          red: true,
                         })); // this changes the red boolean in the ButtonSettings object
                       } else {
                         setRed(false);
                         setButtonSettings((buttonSettings) => ({
                           ...buttonSettings,
-                          red: false
+                          red: false,
                         }));
                       }
                     }}
-                    style={{
+                    style={
                       // this allows the backgroundcolor, box shadow and transform
-                      // to change based on if agouti is true or false
-                      backgroundColor: !red ? "#ebebeb" : "#aaa7a9",
-                      boxShadow: !red ? "0 9px #999" : "0 5px #666",
-                      transform: !red ? "none" : "translateY(4px)"
-                    }}
+                      //   // to change based on if agouti is true or false
+                      !red ? styles.false : styles.true
+                    }
                   >
                     Red
                   </button>
@@ -303,21 +314,17 @@ export default function App() {
                         setBlack(true);
                         setButtonSettings((buttonSettings) => ({
                           ...buttonSettings,
-                          black: true
+                          black: true,
                         }));
                       } else {
                         setBlack(false);
                         setButtonSettings((buttonSettings) => ({
                           ...buttonSettings,
-                          black: false
+                          black: false,
                         }));
                       }
                     }}
-                    style={{
-                      backgroundColor: !black ? "#ebebeb" : "#aaa7a9",
-                      boxShadow: !black ? "0 9px #999" : "0 5px #666",
-                      transform: !black ? "none" : "translateY(4px)"
-                    }}
+                    style={!black ? styles.false : styles.true}
                     value={buttonSettings.black}
                   >
                     Black
@@ -329,21 +336,17 @@ export default function App() {
                         setAgouti(true);
                         setButtonSettings((buttonSettings) => ({
                           ...buttonSettings,
-                          agouti: true
+                          agouti: true,
                         }));
                       } else {
                         setAgouti(false);
                         setButtonSettings((buttonSettings) => ({
                           ...buttonSettings,
-                          agouti: false
+                          agouti: false,
                         }));
                       }
                     }}
-                    style={{
-                      backgroundColor: !agouti ? "#ebebeb" : "#aaa7a9",
-                      boxShadow: !agouti ? "0 9px #999" : "0 5px #666",
-                      transform: !agouti ? "none" : "translateY(4px)"
-                    }}
+                    style={!agouti ? styles.false : styles.true}
                   >
                     Agouti
                   </button>
@@ -354,21 +357,17 @@ export default function App() {
                         setBay(true); // this saves the bay boolean
                         setButtonSettings((buttonSettings) => ({
                           ...buttonSettings,
-                          bay: true
+                          bay: true,
                         })); // this saves the bay boolean in the buttons object
                       } else {
                         setBay(false);
                         setButtonSettings((buttonSettings) => ({
                           ...buttonSettings,
-                          bay: false
+                          bay: false,
                         }));
                       }
                     }}
-                    style={{
-                      backgroundColor: !bay ? "#ebebeb" : "#aaa7a9",
-                      boxShadow: !bay ? "0 9px #999" : "0 5px #666",
-                      transform: !bay ? "none" : "translateY(4px)"
-                    }}
+                    style={!bay ? styles.false : styles.true}
                   >
                     Bay
                   </button>
@@ -379,21 +378,17 @@ export default function App() {
                         setFlaxen(true);
                         setButtonSettings((buttonSettings) => ({
                           ...buttonSettings,
-                          flaxen: true
+                          flaxen: true,
                         }));
                       } else {
                         setFlaxen(false);
                         setButtonSettings((buttonSettings) => ({
                           ...buttonSettings,
-                          flaxen: false
+                          flaxen: false,
                         }));
                       }
                     }}
-                    style={{
-                      backgroundColor: !flaxen ? "#ebebeb" : "#aaa7a9",
-                      boxShadow: !flaxen ? "0 9px #999" : "0 5px #666",
-                      transform: !flaxen ? "none" : "translateY(4px)"
-                    }}
+                    style={!flaxen ? styles.false : styles.true}
                   >
                     Flaxen
                   </button>
@@ -404,21 +399,17 @@ export default function App() {
                         setMushroom(true);
                         setButtonSettings((buttonSettings) => ({
                           ...buttonSettings,
-                          mushroom: true
+                          mushroom: true,
                         }));
                       } else {
                         setMushroom(false);
                         setButtonSettings((buttonSettings) => ({
                           ...buttonSettings,
-                          mushroom: false
+                          mushroom: false,
                         }));
                       }
                     }}
-                    style={{
-                      backgroundColor: !mushroom ? "#ebebeb" : "#aaa7a9",
-                      boxShadow: !mushroom ? "0 9px #999" : "0 5px #666",
-                      transform: !mushroom ? "none" : "translateY(4px)"
-                    }}
+                    style={!mushroom ? styles.false : styles.true}
                   >
                     Mushroom
                   </button>
@@ -429,21 +420,17 @@ export default function App() {
                         setSilverDrapple(true);
                         setButtonSettings((buttonSettings) => ({
                           ...buttonSettings,
-                          silverDrapple: true
+                          silverDrapple: true,
                         }));
                       } else {
                         setSilverDrapple(false);
                         setButtonSettings((buttonSettings) => ({
                           ...buttonSettings,
-                          silverDrapple: false
+                          silverDrapple: false,
                         }));
                       }
                     }}
-                    style={{
-                      backgroundColor: !silverDrapple ? "#ebebeb" : "#aaa7a9",
-                      boxShadow: !silverDrapple ? "0 9px #999" : "0 5px #666",
-                      transform: !silverDrapple ? "none" : "translateY(4px)"
-                    }}
+                    style={!silverDrapple ? styles.false : styles.true}
                   >
                     Silver drapple
                   </button>
@@ -454,21 +441,17 @@ export default function App() {
                         setDun(true);
                         setButtonSettings((buttonSettings) => ({
                           ...buttonSettings,
-                          dun: true
+                          dun: true,
                         }));
                       } else {
                         setDun(false);
                         setButtonSettings((buttonSettings) => ({
                           ...buttonSettings,
-                          dun: false
+                          dun: false,
                         }));
                       }
                     }}
-                    style={{
-                      backgroundColor: !dun ? "#ebebeb" : "#aaa7a9",
-                      boxShadow: !dun ? "0 9px #999" : "0 5px #666",
-                      transform: !dun ? "none" : "translateY(4px)"
-                    }}
+                    style={!dun ? styles.false : styles.true}
                   >
                     Dun
                   </button>
@@ -506,7 +489,7 @@ export default function App() {
                     setEyeColour(eyeColour);
                     setHorse((horse) => ({
                       ...horse,
-                      eyeColour: eyeColour
+                      eyeColour: eyeColour,
                     }));
                   }}
                 />
@@ -519,7 +502,7 @@ export default function App() {
                     setHoofColour(hoofColour);
                     setHorse((horse) => ({
                       ...horse,
-                      hoofColour: hoofColour
+                      hoofColour: hoofColour,
                     }));
                   }}
                 />
@@ -532,7 +515,7 @@ export default function App() {
                     setfacialMarkings(facialMarkings);
                     setHorse((horse) => ({
                       ...horse,
-                      facialMarkings: facialMarkings
+                      facialMarkings: facialMarkings,
                     }));
                   }}
                 />
