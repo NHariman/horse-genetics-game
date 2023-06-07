@@ -10,6 +10,7 @@ Note: you will need to have `npm` installed for this to work.
 
 ## The Project
 This is a skeleton project with basic assets as a gift to [PinkAxolotl85](https://github.com/PinkAxolotl85)
+
 It contains the bare basics of a website that allows the user to turn on various genes and create a horse based on the settings.
 
 ## Future implementations
