@@ -1,0 +1,381 @@
+/*
+** This is the css for the function name
+** since it's called App() and is called
+** by calling <App /> in index.js
+*/
+.App {
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
+  text-align: center;
+  background-color: #efedee;
+}
+
+/*
+** This is the general layout
+*/
+body {
+  padding: 0;
+  margin: 0;
+  background-color: #efedee;
+}
+
+/*
+** this is the main game window
+** It's the BIG BOX
+*/
+.game-window {
+  margin-left: 2.5vw;
+  width: 95vw;
+  height: 100%;
+}
+
+/* this is the box that 
+ ** contains the 
+ ** 2 main columns for the game
+ ** it's like the big box but has flex abilities
+ */
+.Parent {
+  display: flex;
+  flex-direction: row;
+}
+
+/* 
+** little floaty text bubble 
+*/
+.description {
+  width: 45%;
+  height: 15%;
+  overflow-y: auto;
+  background-color: #eeeeee;
+  border-radius: 15px;
+  color: black;
+  text-align: center;
+  box-shadow: 10px 10px 10px rgba(92, 90, 90, 0.2),
+    -0.1em -0.1em 0.4em rgba(255, 255, 255, 0.4);
+  /* first rgba value is the shadow, second one is the light */
+  margin-top: 2em;
+  margin-left: 4em;
+  padding-top: 0.35em;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  padding-bottom: 0.5em;
+}
+
+/* 
+** THIS PUTS THE HORSE IN ITS PLACE 
+*/
+.horse {
+  bottom: 0;
+  text-align: center;
+  display: grid;
+  grid-template-columns: 100% 1fr;
+  grid-template-rows: 100% 1fr;
+}
+
+/* 
+** This controls the horse size!
+*/
+.horse img {
+  max-height: 100%;
+  max-width: 100%;
+}
+
+/* 
+** DO NOT PUT TEXT IN THE HORSE ZONE, 
+** PUT IT IN DESCRIPTION
+*/
+.horse-zone {
+  position: relative;
+  width: 50%;
+  height: 100vh;
+  background-color: #efedee;
+  text-align: right;
+}
+
+/* 
+** This controls the horse's position
+** on the page! 
+*/
+.horse-zone img {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+/*
+** this is the main box for
+** all the buttons and stuff
+** that you find on the right
+** if you want to add more things
+** increase this height to 100vh
+*/
+.settings-window {
+  width: 60%;
+  color: green;
+  background-color: #efedee;
+  border-color: red;
+  border-style: none;
+  height: 100%;
+}
+
+/*
+** this sub section contains the two boxes
+** that hold the buttons and the RL displays
+*/
+.settings-sub-section {
+  width: 100%;
+  height: 70%;
+  border-color: red;
+  border-style: none;
+  background-color: #efedee;
+  display: flex;
+  flex-direction: row;
+}
+
+/*
+** This section holds the buttons
+*/
+.settings-colours-column {
+  width: 60%;
+  height: 100%;
+  background-color: #efedee;
+  border-color: red;
+  border-style: none;
+}
+.settings-colours-column p {
+  padding-top: 1rem;
+}
+
+/*
+** This section holds the RL overview
+*/
+.settings-horse-overview {
+  width: 40%;
+  height: 100%;
+  background-color: #efedee;
+  display: flex;
+  flex-direction: column;
+}
+
+.settings-horse-overview p {
+  padding-top: 1rem;
+}
+
+/*
+** this is the main for both the
+** pasterns AND the set colours overview
+** it will get broken into two parts
+*/
+.settings-horse-choices {
+  border-color: red; /* for debugging */
+  border-style: none; /* for debugging change to solid */
+  border-width: 1px;
+  height: 50%;
+  width: 100%;
+  background-color: #efedee;
+  color: black;
+  display: flex;
+  flex-direction: row;
+}
+
+/*
+** This creates the box where the image
+** of the horse's body goes
+** because its 4 images overlayed over each other
+** it uses a grid with just every entry layered over each other
+*/
+.settings-horse-image-legs {
+  width: 50%;
+  height: 100%;
+  border-color: red; /* for debugging */
+  border-style: none; /* for debugging change to solid */
+  border-width: 1px;
+  position: relative;
+  display: grid;
+  display: grid;
+  grid-template-columns: 100% 1fr;
+  grid-template-rows: 100% 1fr;
+}
+
+/*
+** this defines the grid area.. not sure how
+*/
+.leg-overlay {
+  grid-area: 1 / 1 / 2 / 2;
+}
+
+/*
+** This ensures the horse's body
+** stays within the box, confined
+*/
+.settings-horse-image-legs img {
+  width: 100%;
+  height: 100%;
+}
+
+/*
+** This is the box for the text about
+** the pasterns,
+** it will be split into two columns again
+** using flex
+*/
+.settings-horse-text-legs {
+  margin-top: 0.5rem;
+  width: 50%;
+  height: 100%;
+  border-color: red; /* for debugging */
+  border-style: none; /* for debugging change to solid */ /* for debugging change to solid */
+  border-width: 1px;
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+}
+
+/*
+** This is the div box for the legs text
+*/
+.settings-horse-text-legs-sub {
+  width: 100%;
+  height: 45%;
+  margin-bottom: 0.5em;
+}
+
+/*
+** This creates those little bubbles
+** around the text, if you remove the text the bubbles
+** disappear too bc they're linked
+*/
+.settings-horse-text-legs-sub p {
+  padding: 1em;
+  line-height: 1.5;
+  margin: 0.5em;
+  font-size: 1em;
+  text-align: left;
+  border-color: red; /* for debugging */
+  border-style: none; /* for debugging change to solid */
+  border-width: 1px;
+  border-radius: 15px;
+  background-color: #ffffff;
+}
+
+/*
+** This is the box for the horse's head
+** like in sopranos or smth
+*/
+.settings-horse-head {
+  width: 40%;
+  height: 100%;
+  border-color: red; /* for debugging */
+  border-style: none; /* for debugging change to solid */
+  border-width: 1px;
+  display: grid;
+  grid-template-columns: 100% 1fr;
+  grid-template-rows: 100% 1fr;
+}
+
+/*
+** this controls the size
+** of the horse head
+*/
+.settings-horse-head img {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+/*
+** This is the div for the horse colours
+*/
+.settings-horse-colours {
+  width: 60%;
+  height: 100%;
+  border-color: red; /* for debugging */ /* for debugging */
+  border-style: none; /* for debugging change to solid */
+  border-width: 1px;
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+}
+
+/*
+** this creates the little white bubbles
+** that say eye colour, facial markings etc.
+*/
+.settings-horse-colours p {
+  padding: 1em;
+  margin: 0.5em;
+  color: white;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
+  border-color: red; /* for debugging */
+  border-style: none; /* for debugging change to solid */
+  border-width: 1px;
+  border-radius: 15px;
+  background-color: #ffffff;
+  overflow: wrap;
+}
+
+/*
+** Colour picker box
+**
+*/
+.colour-picker {
+  width: 100%;
+  border-color: red;
+  border-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 0px 0px;
+}
+
+.colour-picker {
+  grid-area: 1 / 1 / 2 / 4;
+}
+.colour-picker .react-colorful {
+  height: 125px;
+
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.colour-picker-eye {
+  grid-area: 1 / 1 / 2 / 2;
+}
+.colour-picker-hoof {
+  grid-area: 1 / 2 / 2 / 3;
+}
+.colour-picker-face {
+  grid-area: 1 / 3 / 2 / 4;
+}
+
+/* 
+** These are the clickable buttons
+**
+*/
+.button {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  margin: 5px;
+  background-color: #4caf50;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.button:hover {
+  background-color: #3e8e41;
+}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
