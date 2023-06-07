@@ -8,6 +8,13 @@ npm run build
 ```
 Note: you will need to have `npm` installed for this to work.
 
+project can then be viewed via:
+```
+http://localhost:3000/
+or 
+http://192.168.241.2:3000/
+```
+
 ## The Project
 This is a skeleton project with basic assets as a gift to [PinkAxolotl85](https://github.com/PinkAxolotl85)
 
