@@ -289,7 +289,7 @@ export default function App() {
                     style={{
                       // this allows the backgroundcolor, box shadow and transform
                       // to change based on if agouti is true or false
-                      backgroundColor: !red ? "#4caf50" : "#3e8e41",
+                      backgroundColor: !red ? "#ebebeb" : "#aaa7a9",
                       boxShadow: !red ? "0 9px #999" : "0 5px #666",
                       transform: !red ? "none" : "translateY(4px)"
                     }}
@@ -314,7 +314,7 @@ export default function App() {
                       }
                     }}
                     style={{
-                      backgroundColor: !black ? "#4caf50" : "#3e8e41",
+                      backgroundColor: !black ? "#ebebeb" : "#aaa7a9",
                       boxShadow: !black ? "0 9px #999" : "0 5px #666",
                       transform: !black ? "none" : "translateY(4px)"
                     }}
@@ -340,7 +340,7 @@ export default function App() {
                       }
                     }}
                     style={{
-                      backgroundColor: !agouti ? "#4caf50" : "#3e8e41",
+                      backgroundColor: !agouti ? "#ebebeb" : "#aaa7a9",
                       boxShadow: !agouti ? "0 9px #999" : "0 5px #666",
                       transform: !agouti ? "none" : "translateY(4px)"
                     }}
@@ -365,7 +365,7 @@ export default function App() {
                       }
                     }}
                     style={{
-                      backgroundColor: !bay ? "#4caf50" : "#3e8e41",
+                      backgroundColor: !bay ? "#ebebeb" : "#aaa7a9",
                       boxShadow: !bay ? "0 9px #999" : "0 5px #666",
                       transform: !bay ? "none" : "translateY(4px)"
                     }}
@@ -390,7 +390,7 @@ export default function App() {
                       }
                     }}
                     style={{
-                      backgroundColor: !flaxen ? "#4caf50" : "#3e8e41",
+                      backgroundColor: !flaxen ? "#ebebeb" : "#aaa7a9",
                       boxShadow: !flaxen ? "0 9px #999" : "0 5px #666",
                       transform: !flaxen ? "none" : "translateY(4px)"
                     }}
@@ -415,7 +415,7 @@ export default function App() {
                       }
                     }}
                     style={{
-                      backgroundColor: !mushroom ? "#4caf50" : "#3e8e41",
+                      backgroundColor: !mushroom ? "#ebebeb" : "#aaa7a9",
                       boxShadow: !mushroom ? "0 9px #999" : "0 5px #666",
                       transform: !mushroom ? "none" : "translateY(4px)"
                     }}
@@ -440,7 +440,7 @@ export default function App() {
                       }
                     }}
                     style={{
-                      backgroundColor: !silverDrapple ? "#4caf50" : "#3e8e41",
+                      backgroundColor: !silverDrapple ? "#ebebeb" : "#aaa7a9",
                       boxShadow: !silverDrapple ? "0 9px #999" : "0 5px #666",
                       transform: !silverDrapple ? "none" : "translateY(4px)"
                     }}
@@ -465,7 +465,7 @@ export default function App() {
                       }
                     }}
                     style={{
-                      backgroundColor: !dun ? "#4caf50" : "#3e8e41",
+                      backgroundColor: !dun ? "#ebebeb" : "#aaa7a9",
                       boxShadow: !dun ? "0 9px #999" : "0 5px #666",
                       transform: !dun ? "none" : "translateY(4px)"
                     }}

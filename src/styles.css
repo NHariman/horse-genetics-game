@@ -112,7 +112,7 @@ body {
 */
 .settings-window {
   width: 60%;
-  color: green;
+  color: rgb(39, 37, 37);
   background-color: #efedee;
   border-color: red;
   border-style: none;
@@ -356,26 +356,27 @@ body {
 */
 .button {
   display: inline-block;
-  padding: 15px 25px;
-  font-size: 24px;
+  width: 10em;
+  padding: 1rem 1.5rem;
+  font-size: 1rem;
   cursor: pointer;
   text-align: center;
   text-decoration: none;
   outline: none;
-  color: #fff;
-  margin: 5px;
-  background-color: #4caf50;
+  color: rgb(39, 37, 37);
+  margin: 0.5rem;
+  background-color: #ebebeb;
   border: none;
   border-radius: 15px;
-  box-shadow: 0 9px #999;
+  box-shadow: 0 9px #999, -0.1em -0.1em 0.4em rgba(255, 255, 255, 0.4);
 }
 
 .button:hover {
-  background-color: #3e8e41;
+  background-color: #aaa7a9;
 }
 
 .button:active {
-  background-color: #3e8e41;
+  background-color: #aaa7a9;
   box-shadow: 0 5px #666;
   transform: translateY(4px);
 }
