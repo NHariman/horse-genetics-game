@@ -19,3 +19,4 @@ It contains the bare basics of a website that allows the user to turn on various
 - add descriptions per gene
 - add leg patterns
 - allow the hoof, mane and eye colour sliders to affect the actual horse design
+- allow for different colour body bases
